@@ -1,6 +1,6 @@
 {
 	"name": "n8n-nodes-convert-html-to-pdf",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Convert HTML content or any website URL to a polished PDF document using PDF API Hub",
 	"license": "MIT",
 	"homepage": "https://pdfapihub.com",
@@ -26,8 +26,7 @@
 		"dev": "n8n-node dev",
 		"lint": "n8n-node lint",
 		"lint:fix": "n8n-node lint --fix",
-		"release": "n8n-node release",
-		"prepublishOnly": "n8n-node prerelease"
+		"release": "n8n-node release"
 	},
 	"files": [
 		"dist"
