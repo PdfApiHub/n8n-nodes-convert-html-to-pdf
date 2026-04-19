@@ -11,10 +11,11 @@ export class ConvertHtmlToPdf implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: 'HTML to PDF',
 		name: 'convertHtmlToPdf',
-		icon: { light: 'file:../../icons/icon.svg', dark: 'file:../../icons/icon.svg' },
+		icon: { light: 'file:../../icons/light.svg', dark: 'file:../../icons/dark.svg' },
 		group: ['transform'],
 		version: 1,
 		description: 'Convert HTML content or any website URL to a polished PDF document using PDF API Hub',
+		subtitle: '={{$parameter["operation"]}}',
 		defaults: { name: 'HTML to PDF' },
 		inputs: [NodeConnectionTypes.Main],
 		outputs: [NodeConnectionTypes.Main],
@@ -28,18 +29,18 @@ export class ConvertHtmlToPdf implements INodeType {
 				noDataExpression: true,
 				options: [
 				{
-								"name": "HTML to PDF",
-								"value": "htmlToPdf",
-								"description": "Generate PDF from HTML/CSS",
-								"action": "Convert HTML to PDF"
+					name: 'HTML to PDF',
+					value: 'htmlToPdf',
+					description: 'Generate PDF from HTML/CSS',
+					action: 'Convert HTML to PDF',
 				},
 				{
-								"name": "URL to PDF",
-								"value": "urlToPdf",
-								"description": "Capture website as PDF",
-								"action": "Capture a website as PDF"
-				}
-],
+					name: 'URL to PDF',
+					value: 'urlToPdf',
+					description: 'Capture website as PDF',
+					action: 'Capture a website as PDF',
+				},
+			],
 				default: 'htmlToPdf',
 			},
 			...description,
